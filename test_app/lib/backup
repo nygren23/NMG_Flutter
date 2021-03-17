@@ -1,0 +1,435 @@
+ backgroundColor: Colors.white70,
+        appBar: new AppBar(
+          title: new Text("Newbridge Marketing Group"),
+          actions: <Widget>[
+            new IconButton(
+              icon: new Image.asset("assets/icon.png"),
+              iconSize: 30.0,
+            ),
+          ],
+        ),
+        body: new ListView(
+          shrinkWrap: true,
+          scrollDirection: Axis.vertical,
+          children: <Widget>[
+            new Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Text(
+                  "To view an ambassador program, click that brand's picture"),
+            ),
+            new Divider(),
+            new Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Container(
+                    child: FittedBox(
+                        child: Material(
+                            elevation: 15.0,
+                            borderRadius: new BorderRadius.circular(8.0),
+                            color: Colors.black,
+                            child: new Column(
+                              children: <Widget>[
+                                Container(
+                                  height: 110,
+                                  width: 200,
+                                  child: GestureDetector(
+                                    onTap: _launchBean,
+                                    child: new ClipRRect(
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: new Radius.circular(8.0),
+                                          topRight: new Radius.circular(8.0),
+                                        ),
+                                        child: Image(
+                                            fit: BoxFit.fill,
+                                            alignment: Alignment.topRight,
+                                            image: AssetImage(
+                                                "assets/llbean.jpg"))),
+                                  ),
+                                ),
+                                Container(
+                                    child: new Text(
+                                  "L.L. Bean",
+                                  style: TextStyle(color: Colors.white),
+                                )),
+                              ],
+                            ))))),
+            new Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Container(
+                    child: FittedBox(
+                        child: Material(
+                            elevation: 15.0,
+                            borderRadius: new BorderRadius.circular(8.0),
+                            color: Colors.black,
+                            child: new Column(
+                              children: <Widget>[
+                                Container(
+                                  height: 110,
+                                  width: 200,
+                                  child: GestureDetector(
+                                    onTap: _launchDirectv,
+                                    child: new ClipRRect(
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: new Radius.circular(8.0),
+                                          topRight: new Radius.circular(8.0),
+                                        ),
+                                        child: Image(
+                                            fit: BoxFit.fill,
+                                            alignment: Alignment.topRight,
+                                            image: AssetImage(
+                                                "assets/directv.jpg"))),
+                                  ),
+                                ),
+                                Container(
+                                    child: new Text(
+                                  "DirecTV",
+                                  style: TextStyle(color: Colors.white),
+                                )),
+                              ],
+                            ))))),
+
+          ],
+        ),
+
+
+
+        /* SliverList(
+                    delegate: SliverChildListDelegate(
+                      [
+                        new Padding(
+                          padding: EdgeInsets.all(7.0),
+                          child: Divider(
+                            thickness: 2.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  */
+
+          --------------------------------------------------------------------------------------------
+
+
+
+         import 'package:flutter/material.dart';
+         import 'package:url_launcher/url_launcher.dart';
+
+         void main() {
+           runApp(new MyApp());
+         }
+
+         class MyApp extends StatelessWidget {
+           @override
+           Widget build(BuildContext context) {
+             return new MaterialApp(
+               theme: ThemeData(
+                 brightness: Brightness.light,
+                 primaryColor: Colors.black,
+                 accentColor: Colors.black,
+                 //fontFamily:
+               ),
+               debugShowCheckedModeBanner: false,
+               title: "NMG App 1",
+               home: new Scaffold(
+
+                   body: new CustomScrollView(
+                 slivers: <Widget>[
+                   SliverAppBar(
+                     pinned: true,
+                     expandedHeight: 200,
+                     backgroundColor: Colors.grey,
+                     snap: false,
+                     //bottom:
+                     flexibleSpace: new FlexibleSpaceBar(
+                       centerTitle: true,
+                       title: new Padding(
+                         padding: EdgeInsets.only(
+                             top: 29.0,
+                           left: 10.0,
+                         ),
+                         child: Text(
+                           "Newbridge Opportunities",
+                           style: TextStyle(
+                             fontSize: 27.0,
+                             fontWeight: FontWeight.bold,
+                           ),
+                         ),
+                       ),
+                       background: new Opacity(
+                         opacity: 0.5,
+                         child: Image(
+                           image: AssetImage(
+                               "assets/header2.jpg"
+                           ),
+                           fit: BoxFit.fitWidth,
+                           alignment: Alignment.topLeft,
+                         ),
+                       ),
+                     ),
+                   ),
+
+
+
+
+                   SliverToBoxAdapter(
+                        child: new Padding(
+                           padding: EdgeInsets.all(7.0),
+                           child: Divider(
+                             thickness: 2.0,
+                           ),
+                         ),
+                   ),
+
+
+                   SliverAppBar(
+                     title: new Text(
+                       "Brand Ambassador Programs",
+                     ),
+                     pinned: true,
+                   ),
+
+
+                   SliverList(
+                     delegate: SliverChildListDelegate(
+                       [
+
+                         new Padding(
+                             padding: EdgeInsets.all(12.0),
+                             child: Container(
+                                 child: FittedBox(
+                                     child: Material(
+                                         elevation: 0.0,
+                                         borderRadius: new BorderRadius.circular(8.0),
+                                         color: Colors.grey,
+                                         child: new Column(
+                                           children: <Widget>[
+                                             Container(
+                                               height: 110,
+                                               width: 200,
+                                               child: GestureDetector(
+                                                 onTap: _launchBean,
+                                                 child: new ClipRRect(
+                                                     borderRadius: BorderRadius.only(
+                                                       topLeft: new Radius.circular(8.0),
+                                                       topRight:
+                                                           new Radius.circular(8.0),
+                                                     ),
+                                                     child: Image(
+                                                         fit: BoxFit.fill,
+                                                         alignment: Alignment.topRight,
+                                                         image: AssetImage(
+                                                             "assets/llbean.jpg"))
+                                                 ),
+                                               ),
+                                             ),
+                                             Container(
+                                                 child: new Text(
+                                               "L.L. Bean",
+                                               style: TextStyle(color: Colors.white),
+                                             )),
+                                           ],
+                                         ))))),
+
+
+                       ],
+                     ),
+                   ),
+
+                   SliverToBoxAdapter(
+                     child: new Padding(
+                       padding: EdgeInsets.all(7.0),
+                       child: Divider(
+                         thickness: 2.0,
+                       ),
+                     ),
+                   ),
+
+
+
+                   SliverAppBar(
+                     title: new Text(
+                       "Sampling",
+                     ),
+                     pinned: true,
+                   ),
+
+                   SliverList(
+                     delegate: SliverChildListDelegate(
+                       [
+                         new Padding(
+                             padding: EdgeInsets.all(12.0),
+                             child: Container(
+                                 child: FittedBox(
+                                     child: Material(
+                                         elevation: 0.0,
+                                         borderRadius: new BorderRadius.circular(8.0),
+                                         color: Colors.grey,
+                                         child: new Column(
+                                           children: <Widget>[
+                                             Container(
+                                               height: 110,
+                                               width: 200,
+                                               child: GestureDetector(
+                                                 onTap: _launchBean,
+                                                 child: new ClipRRect(
+                                                     borderRadius: BorderRadius.only(
+                                                       topLeft: new Radius.circular(8.0),
+                                                       topRight:
+                                                       new Radius.circular(8.0),
+                                                     ),
+                                                     child: Image(
+                                                         fit: BoxFit.fill,
+                                                         alignment: Alignment.topRight,
+                                                         image: AssetImage(
+                                                             "assets/llbean.jpg"))),
+                                               ),
+                                             ),
+                                             Container(
+                                                 child: new Text(
+                                                   "L.L. Bean",
+                                                   style: TextStyle(color: Colors.white),
+                                                 )),
+                                           ],
+                                         ))))),
+
+
+                       ],
+                     ),
+                   ),
+
+
+
+
+                 ],
+               )),
+             );
+           }
+         }
+
+         _launchBean() async {
+           const url = 'https://www.llbean.com';
+           if (await canLaunch(url)) {
+             await launch(url);
+           } else {
+             throw 'Could not launch $url';
+           }
+         }
+
+         _launchDirectv() async {
+           const url = 'https://www.directv.com';
+           if (await canLaunch(url)) {
+             await launch(url);
+           } else {
+             throw 'Could not launch $url';
+           }
+         }
+
+         _launchBrewDr() async {
+           const url = 'https://www.brewdrkombucha.com';
+           if (await canLaunch(url)) {
+             await launch(url);
+           } else {
+             throw 'Could not launch $url';
+           }
+         }
+
+         _launchPatagonia() async {
+           const url = 'https://www.patagonia.com';
+           if (await canLaunch(url)) {
+             await launch(url);
+           } else {
+             throw 'Could not launch $url';
+           }
+         }
+
+         ----------------------------------------------------------
+
+         //use sizedbox to make space (instead of empty padding)
+
+
+
+
+import 'package:flutter/material.dart';
+import 'dart:io';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:path/path.dart';
+
+
+class Upload extends StatefulWidget {
+  @override
+  _State createState() => _State();
+}
+
+class _State extends State<Upload> {
+  File _image;
+
+  Future chooseFile() async {
+    // ignore: deprecated_member_use
+    await ImagePicker.pickImage(source: ImageSource.gallery).then((image) {
+      setState(() {
+        _image = image;
+      });
+    });
+  }
+
+  Future uploadImage(BuildContext context) async {
+    String fileName = basename(_image.path);
+    StorageReference firebaseStorageRef = FirebaseStorage.instance.ref().child(fileName);
+    StorageUploadTask uploadTask = firebaseStorageRef.putFile(_image);
+
+    await uploadTask.onComplete;
+
+    setState(() {
+      print("Picture Uploaded");
+      Scaffold.of(context)
+          .showSnackBar(SnackBar(content: Text('Picture Uploaded')));
+      _image = null;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Upload Photos of Your Work',
+        ),
+      ),
+      body: Builder(
+        builder: (context) => Container(
+          child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: ListView(
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text('Select Image'),
+                    onPressed: () {
+                      chooseFile();
+                    },
+                  ),
+                  RaisedButton(
+                    child: Text('Upload Image'),
+                    onPressed: () {
+                      uploadImage(context);
+                    },
+                  ),
+
+                  _image != null
+                      ? Image.file(
+                          _image,
+                        )
+                      : Container(
+                    height: 200.0,
+                  ),
+
+
+                ],
+
+              )),
+        ),
+
+      ),
+    );
+  }
+}

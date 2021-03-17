@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "847371079396",
+    "firebase_url": "https://newbridgeapp-461c6.firebaseio.com",
+    "project_id": "newbridgeapp-461c6",
+    "storage_bucket": "newbridgeapp-461c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847371079396:android:d16e1df100a1e3fb9926f1",
+        "android_client_info": {
+          "package_name": "com.example.test_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847371079396-cd759lcvv3u0miu3b2re7g6lbtck7nnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXgtBJuQldOjAIW6QSf58aqfDGMgBiR_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847371079396-cd759lcvv3u0miu3b2re7g6lbtck7nnk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
